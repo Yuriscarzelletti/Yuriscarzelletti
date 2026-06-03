@@ -13,6 +13,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#0c0c0f">
 </head>
+
 <body>
 
 <div class="lang-switcher">
@@ -25,7 +26,9 @@
 </div>
 
 <header class="topbar">
-  <a class="brand" href="index.html"><img class="brand__logo" src="../assets/logo.png" alt="Logo" /></a>
+  <a class="brand" href="index.html">
+    <img class="brand__logo" src="../assets/logo.png" alt="Logo" />
+  </a>
 
   <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -59,9 +62,11 @@
             <label>Nombre
               <input name="name" required placeholder="Tu nombre" />
             </label>
+
             <label>Email
               <input name="email" type="email" required placeholder="Tu email" />
             </label>
+
             <label>Mensaje
               <textarea name="message" rows="5" required placeholder="Escribe aquí..."></textarea>
             </label>
