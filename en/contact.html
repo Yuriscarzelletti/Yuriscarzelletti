@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Yuri Scarzelletti</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="icon" href="../assets/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Yuri CV">
+  <meta name="application-name" content="Yuri CV">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0c0c0f">
+</head>
+<body>
+
+<a class="lang-switch flag-only" href="/contatti.html" aria-label="Italian version" title="Italian version">
+  <img src="../assets/flag-it.svg" alt="Italian version">
+</a>
+
+<header class="topbar">
+  <a class="brand" href="index.html"><img class="brand__logo" src="../assets/logo.png" alt="Logo" /></a>
+
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav" id="nav">
+    <a href="index.html">Home</a>
+    <a href="presentation.html">Professional Profile</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a class="is-active" href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="section">
+    <h1 class="section__title">Contact</h1>
+    <p class="section__subtitle">
+      For professional communication, maritime opportunities or contacts related to my profile, you can use the references below.
+    </p>
+
+    <div class="card">
+      <div class="card__body">
+        <div class="contactGrid">
+          <div>
+            <h2 class="h2">Info</h2>
+            <p class="p"><strong>Email:</strong> scarzellettiyuri@hotmail.it</p>
+            <p class="p"><strong>LinkedIn:</strong> linkedin.com/in/scarzellettiyuri</p>
+          </div>
+
+          <form class="form" action="https://formspree.io/f/xdkqrkjj" method="POST">
+            <label>Name
+              <input name="name" required placeholder="Your name" />
+            </label>
+            <label>Email
+              <input name="email" type="email" required placeholder="Your email" />
+            </label>
+            <label>Message
+              <textarea name="message" rows="5" required placeholder="Write here..."></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send</button>
+            <p class="hint"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Yuri Scarzelletti</p>
+  </footer>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>
