@@ -1,13 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Yuri Scarzelletti | Deck Officer / Second Officer</title>
-  <meta name="description" content="Official website and professional profile of Yuri Scarzelletti, Italian Deck Officer with experience in cruise, passenger ships, Ro-Ro/Pax and maritime operations.">
+  <title>CV | Yuri Scarzelletti</title>
+  <meta name="description" content="Personal CV website: professional profile, curriculum and contact information of Yuri Scarzelletti, Deck Officer." />
 
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="icon" href="../assets/apple-touch-icon.png">
+
+  <meta name="apple-mobile-web-app-title" content="Yuri CV">
+  <meta name="application-name" content="Yuri CV">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0c0c0f">
 
   <link rel="alternate" hreflang="it" href="https://yuriscarzelletti.it/">
   <link rel="alternate" hreflang="en" href="https://yuriscarzelletti.it/en/">
@@ -16,33 +24,98 @@
 
 <body>
 
-<a class="lang-switch flag-only" href="/" aria-label="Versione italiana" title="Versione italiana">
+<a class="lang-switch flag-only" href="/" aria-label="Italian version" title="Italian version">
   🇮🇹
 </a>
 
-  <header class="hero">
-    <h1>Yuri Scarzelletti</h1>
-    <h2>Deck Officer / Second Officer</h2>
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Home">
+    <img class="brand__logo" src="../assets/logo.png" alt="Logo" />
+  </a>
 
-    <p>
-      Italian Deck Officer with experience in maritime operations, passenger ships,
-      cruise vessels and Ro-Ro/Pax units. Focused on bridge watchkeeping,
-      navigation, safety procedures, onboard operations and teamwork in
-      international maritime environments.
-    </p>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 
-    <div class="buttons">
-      <a href="../curriculum.html">View Curriculum</a>
-      <a href="../contatti.html">Contact Me</a>
-    </div>
-  </header>
-
-  <nav>
-    <a href="/en/">Home</a>
-    <a href="/en/presentation.html">Professional Profile</a>
-    <a href="/en/curriculum.html">Curriculum</a>
-    <a href="/en/contact.html">Contact</a>
+  <nav class="nav" id="nav">
+    <a class="is-active" href="index.html">Home</a>
+    <a href="presentation.html">Professional Profile</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="contact.html">Contact</a>
   </nav>
+</header>
 
+<main>
+  <section class="hero">
+    <div class="hero__bg" style="background-image:url('../assets/hero.jpg')" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <div class="hero__card">
+        <h1 class="title">Yuri Scarzelletti - Deck Officer</h1>
+        <p class="lead">
+          Experience in the maritime industry, passenger ships and cargo vessels.
+          Focused on navigation, safety, onboard procedures and professional growth
+          within the maritime sector.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="presentation.html">Learn more</a>
+          <a class="btn btn--ghost" href="contact.html">Send a message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stat">
+        <div class="stat__num" data-count="11">0</div>
+        <div class="stat__label">Years of experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num" data-count="66">0</div>
+        <div class="stat__label">Months of experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num" data-count="18">0</div>
+        <div class="stat__label">Embarkations</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section__title">Explore</h2>
+    <p class="section__subtitle">Go directly to the main sections of the website.</p>
+
+    <div class="grid">
+      <a class="cardLink" href="presentation.html">
+        <div class="card">
+          <img class="card__img" src="../assets/img-presentazione.jpg" alt="Professional Profile" />
+          <div class="card__body">
+            <h3 class="card__title">Professional Profile</h3>
+            <p class="card__text">Profile, skills and professional highlights.</p>
+            <span class="btn btn--ghost">Open</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="cardLink" href="curriculum.html">
+        <div class="card">
+          <img class="card__img" src="../assets/img-curriculum.jpg" alt="Curriculum" />
+          <div class="card__body">
+            <h3 class="card__title">Integrated Curriculum</h3>
+            <p class="card__text">Experience, education and certifications.</p>
+            <span class="btn btn--ghost">Open</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Yuri Scarzelletti — All rights reserved</p>
+  </footer>
+</main>
+
+<script src="../script.js"></script>
 </body>
 </html>
