@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="it">
 <head>
@@ -13,10 +14,19 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#0c0c0f">
 </head>
+
 <body>
 
+<div class="lang-switcher">
+  <a class="lang-switch flag-only" href="/en/contact.html" aria-label="English version" title="English version">
+    <img src="assets/flag-en.svg" alt="English version">
+  </a>
+</div>
+
 <header class="topbar">
-  <a class="brand" href="index.html"><img class="brand__logo" src="assets/logo.png" alt="Logo" /></a>
+  <a class="brand" href="index.html">
+    <img class="brand__logo" src="assets/logo.png" alt="Logo" />
+  </a>
 
   <button class="burger" id="burger" aria-label="Apri menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -33,7 +43,9 @@
 <main class="page">
   <section class="section">
     <h1 class="section__title">Contatti</h1>
-    <p class="section__subtitle">Per comunicazioni professionali, opportunità nel settore marittimo o contatti legati al mio profilo, puoi utilizzare i riferimenti indicati di seguito.</p>
+    <p class="section__subtitle">
+      Per comunicazioni professionali, opportunità nel settore marittimo o contatti legati al mio profilo, puoi utilizzare i riferimenti indicati di seguito.
+    </p>
 
     <div class="card">
       <div class="card__body">
@@ -48,9 +60,11 @@
             <label>Nome
               <input name="name" required placeholder="Il tuo nome" />
             </label>
+
             <label>Email
               <input name="email" type="email" required placeholder="La tua email" />
             </label>
+
             <label>Messaggio
               <textarea name="message" rows="5" required placeholder="Scrivi qui..."></textarea>
             </label>
@@ -71,3 +85,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+```
