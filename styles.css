@@ -264,28 +264,33 @@ body{
 .lang-switch {
   position: fixed;
   top: 18px;
-  right: 22px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  z-index: 9999;
+
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
-  border-radius: 999px;
+  justify-content: center;
+
   text-decoration: none;
-  color: inherit;
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(8px);
-  z-index: 9999;
+
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .lang-switch:hover {
-  transform: translateY(-1px);
+  transform: translateX(-50%) translateY(-1px);
   background: rgba(255, 255, 255, 0.20);
 }
 
-.lang-switch .flag {
-  font-size: 18px;
+.flag-only {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 24px;
   line-height: 1;
 }
