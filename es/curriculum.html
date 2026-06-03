@@ -1,1 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículum | Yuri Scarzelletti</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="icon" href="../assets/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Yuri CV">
+  <meta name="application-name" content="Yuri CV">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0c0c0f">
+</head>
+<body>
 
+<div class="lang-switcher">
+  <a class="lang-switch flag-only" href="/curriculum.html" aria-label="Versión italiana" title="Versión italiana">
+    <img src="../assets/flag-it.svg" alt="Versión italiana">
+  </a>
+  <a class="lang-switch flag-only" href="/en/curriculum.html" aria-label="English version" title="English version">
+    <img src="../assets/flag-en.svg" alt="English version">
+  </a>
+</div>
+
+<header class="topbar">
+  <a class="brand" href="index.html"><img class="brand__logo" src="../assets/logo.png" alt="Logo" /></a>
+
+  <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav" id="nav">
+    <a href="index.html">Inicio</a>
+    <a href="presentacion.html">Presentación</a>
+    <a class="is-active" href="curriculum.html">Currículum</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="section">
+    <h1 class="section__title">Currículum Integrado</h1>
+    <p class="section__subtitle">Descarga el CV y consulta la versión online.</p>
+
+    <div class="card">
+      <div class="card__body">
+        <div class="cta-row">
+          <a class="btn" href="../assets/cv.pdf" target="_blank" rel="noopener">Abrir CV (PDF)</a>
+          <a class="btn btn--ghost" href="contacto.html">Solicitar información</a>
+        </div>
+
+        <hr class="hr"/>
+
+        <h2 class="h2">Experiencia</h2>
+        <div class="timeline">
+          <div class="tl">
+            <div class="tl__when">2023 – Actualidad</div>
+            <div class="tl__what">
+              <strong>Segundo Oficial de Puente / MSC Cruceros</strong>
+              <div class="muted">Oficial de Puente</div>
+            </div>
+          </div>
+          <div class="tl">
+            <div class="tl__when">2015 – 2023</div>
+            <div class="tl__what">
+              <strong>Oficial de Puente / Grimaldi Group</strong>
+              <div class="muted">Oficial de Puente & Primer Oficial de Puente</div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="h2">Formación</h2>
+        <ul class="list">
+          <li>Diploma Náutico — Istituto Tecnico Nautico Caboto Gaeta</li>
+          <li>Aspirante Capitán de Largo Curso</li>
+          <li>Trayectoria profesional marítima conforme a los estándares STCW</li>
+          <li>Formación náutica y operativa en el departamento de puente</li>
+        </ul>
+
+        <h2 class="h2">Competencias operativas</h2>
+        <ul class="list">
+          <li>Guardia de puente</li>
+          <li>Planificación del viaje</li>
+          <li>Procedimientos de navegación</li>
+          <li>Seguridad y protección</li>
+          <li>Procedimientos de emergencia</li>
+          <li>Procedimientos ISM / SMS</li>
+          <li>Certificación marítima</li>
+          <li>Operaciones portuarias</li>
+          <li>Trabajo en equipo multicultural</li>
+          <li>Comunicación operativa en inglés</li>
+        </ul>
+
+        <h2 class="h2">Idiomas</h2>
+        <ul class="list">
+          <li>Italiano — Lengua materna</li>
+          <li>Inglés — C1</li>
+          <li>Español — B1</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Yuri Scarzelletti</p>
+  </footer>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>
