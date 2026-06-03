@@ -260,3 +260,32 @@ body{
   .nav.is-open{ display:flex; }
   .burger{ display:block; }
 }
+
+.lang-switch {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+}
+
+.lang-switch:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.20);
+}
+
+.lang-switch .flag {
+  font-size: 18px;
+  line-height: 1;
+}
