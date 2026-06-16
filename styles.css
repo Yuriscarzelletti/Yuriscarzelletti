@@ -34,7 +34,6 @@ body{
   overflow-x:hidden;
 }
 
-/* texture carta nautica */
 body::before{
   content:"";
   position:fixed;
@@ -48,7 +47,6 @@ body::before{
   z-index:0;
 }
 
-/* alone decorativo in alto a destra */
 body::after{
   content:"";
   position:fixed;
@@ -189,12 +187,12 @@ body > .lang-switch{
   z-index:1;
 }
 
-/* immagine hero: logo più visibile, spostato a destra */
+/* SFONDO HERO CORRETTO: stessa larghezza, ma immagine più bassa */
 .hero__bg{
   position:absolute;
   inset:0;
   background-size:cover;
-  background-position:62% center;
+  background-position:62% 30%;
   transform:scale(1.01);
   filter:saturate(1.05) contrast(1.03);
 }
@@ -234,7 +232,7 @@ body > .lang-switch{
   align-items:flex-end;
 }
 
-/* card spostata a sinistra e più bassa, così non copre il logo */
+/* card a sinistra, più bassa, per non coprire il logo */
 .hero__card{
   max-width:520px;
   background: linear-gradient(180deg, rgba(10,27,40,.68), rgba(12,31,45,.78));
@@ -258,7 +256,6 @@ body > .lang-switch{
   pointer-events:none;
 }
 
-/* piccola ancora decorativa */
 .hero__card::after{
   content:"⚓";
   position:absolute;
@@ -409,7 +406,6 @@ body > .lang-switch{
   position:relative;
 }
 
-/* cordame decorativo nelle sezioni */
 .section::before{
   content:"";
   position:absolute;
@@ -809,7 +805,7 @@ body > .lang-switch:hover{
 
   .hero__bg{
     background-size:cover;
-    background-position:center top;
+    background-position:center 28%;
     transform:scale(1);
   }
 
