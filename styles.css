@@ -167,7 +167,7 @@ body > .lang-switch{
   overflow:hidden;
 }
 
-/* rosa dei venti / elemento scenografico */
+/* rosa dei venti decorativa */
 .hero::before{
   content:"";
   position:absolute;
@@ -178,7 +178,7 @@ body > .lang-switch{
   transform: translateY(-50%);
   border-radius:50%;
   pointer-events:none;
-  opacity:.16;
+  opacity:.13;
   background:
     radial-gradient(circle, transparent 0 39%, rgba(255,255,255,.10) 39.4% 40%, transparent 40.4%),
     radial-gradient(circle, transparent 0 64%, rgba(255,255,255,.08) 64.3% 64.9%, transparent 65.2%),
@@ -189,12 +189,13 @@ body > .lang-switch{
   z-index:1;
 }
 
+/* immagine hero: logo più visibile, spostato a destra */
 .hero__bg{
   position:absolute;
   inset:0;
   background-size:cover;
-  background-position:center;
-  transform:scale(1.03);
+  background-position:62% center;
+  transform:scale(1.01);
   filter:saturate(1.05) contrast(1.03);
 }
 
@@ -203,12 +204,12 @@ body > .lang-switch{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(180deg, rgba(3,10,16,.26), rgba(4,12,19,.80)),
-    radial-gradient(circle at 20% 30%, rgba(31,167,120,.12), transparent 24%),
-    linear-gradient(90deg, rgba(0,0,0,.32), rgba(0,0,0,.12) 35%, rgba(0,0,0,.40));
+    linear-gradient(180deg, rgba(3,10,16,.18), rgba(4,12,19,.66)),
+    radial-gradient(circle at 62% 42%, rgba(255,220,130,.12), transparent 24%),
+    linear-gradient(90deg, rgba(0,0,0,.24), rgba(0,0,0,.08) 42%, rgba(0,0,0,.32));
 }
 
-/* corda decorativa in basso nella hero */
+/* corda decorativa sotto la hero */
 .hero__content::after{
   content:"";
   display:block;
@@ -228,18 +229,23 @@ body > .lang-switch{
   width:min(1080px, 92vw);
   padding:48px 0;
   z-index:2;
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-end;
 }
 
+/* card spostata a sinistra e più bassa, così non copre il logo */
 .hero__card{
-  max-width:760px;
-  background: linear-gradient(180deg, rgba(10,27,40,.76), rgba(12,31,45,.88));
+  max-width:520px;
+  background: linear-gradient(180deg, rgba(10,27,40,.68), rgba(12,31,45,.78));
   border:1px solid rgba(255,255,255,.10);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 30px 28px;
-  backdrop-filter: blur(8px);
+  padding: 26px 24px;
+  backdrop-filter: blur(7px);
   position:relative;
   overflow:hidden;
+  margin-top:170px;
 }
 
 .hero__card::before{
@@ -248,19 +254,19 @@ body > .lang-switch{
   inset:0;
   background:
     linear-gradient(120deg, transparent 0 35%, rgba(255,255,255,.05) 50%, transparent 65%),
-    linear-gradient(to right, rgba(201,168,106,.22), transparent 24%);
+    linear-gradient(to right, rgba(201,168,106,.18), transparent 24%);
   pointer-events:none;
 }
 
-/* piccola ancora decorativa stilizzata */
+/* piccola ancora decorativa */
 .hero__card::after{
   content:"⚓";
   position:absolute;
-  right:20px;
-  bottom:12px;
-  font-size:40px;
+  right:18px;
+  bottom:10px;
+  font-size:36px;
   line-height:1;
-  opacity:.10;
+  opacity:.09;
   color:#ffffff;
   pointer-events:none;
 }
@@ -403,7 +409,7 @@ body > .lang-switch{
   position:relative;
 }
 
-/* festone/cordame decorativo */
+/* cordame decorativo nelle sezioni */
 .section::before{
   content:"";
   position:absolute;
@@ -759,7 +765,7 @@ body > .lang-switch:hover{
     width:72vw;
     height:72vw;
     right:-110px;
-    opacity:.12;
+    opacity:.10;
   }
 }
 
@@ -801,8 +807,23 @@ body > .lang-switch:hover{
     min-height:76vh;
   }
 
+  .hero__bg{
+    background-size:cover;
+    background-position:center top;
+    transform:scale(1);
+  }
+
+  .hero__content{
+    align-items:flex-end;
+    padding-top:260px;
+    padding-bottom:34px;
+  }
+
   .hero__card{
-    padding:26px 20px;
+    max-width:100%;
+    margin-top:0;
+    padding:22px 18px;
+    background: linear-gradient(180deg, rgba(10,27,40,.72), rgba(12,31,45,.84));
   }
 
   .section{
