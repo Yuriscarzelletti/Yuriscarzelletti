@@ -188,7 +188,7 @@ body > .lang-switch{
   z-index:1;
 }
 
-/* SFONDO HERO */
+/* SFONDO HERO DESKTOP */
 .hero__bg{
   position:absolute;
   top:0;
@@ -686,14 +686,15 @@ body > .lang-switch{
   background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent);
 }
 
-/* LANGUAGE SWITCHER */
+/* LANGUAGE SWITCHER
+   Non è più fixed: resta in alto e poi scorre via normalmente */
 .lang-switcher,
 body > .lang-switch{
-  position: fixed;
-  top: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9999;
+  position:absolute;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:9999;
 }
 
 .lang-switcher{
@@ -814,15 +815,15 @@ body > .lang-switch:hover{
   }
 
   .hero{
-    padding-top:58vw;
+    padding-top:64vw;
     padding-bottom:34px;
   }
 
   .hero__bg{
-    height:58vw;
-    min-height:210px;
-    max-height:330px;
-    background-size:100% auto;
+    height:64vw;
+    min-height:230px;
+    max-height:370px;
+    background-size:92% auto;
     background-repeat:no-repeat;
     background-position:center top;
     transform:none;
@@ -831,8 +832,8 @@ body > .lang-switch:hover{
 
   .hero__bg::after{
     background:
-      linear-gradient(180deg, rgba(3,10,16,.05), rgba(4,12,19,.18) 60%, rgba(4,12,19,.86)),
-      linear-gradient(90deg, rgba(0,0,0,.10), transparent 45%, rgba(0,0,0,.10));
+      linear-gradient(180deg, rgba(3,10,16,.03), rgba(4,12,19,.12) 58%, rgba(4,12,19,.86)),
+      linear-gradient(90deg, rgba(0,0,0,.06), transparent 45%, rgba(0,0,0,.06));
   }
 
   .hero::before{
@@ -866,6 +867,9 @@ body > .lang-switch:hover{
 
   .lang-switcher,
   body > .lang-switch{
-    top:82px;
+    position:absolute;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
   }
 }
