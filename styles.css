@@ -236,7 +236,7 @@ body > .lang-switch{
   display:block;
 }
 
-/* CARD HERO: allungata fino al bordo destro dei counters */
+/* CARD HERO */
 .hero__card{
   width:100%;
   max-width:100%;
@@ -814,15 +814,29 @@ body > .lang-switch:hover{
   }
 
   .hero{
-    padding-top:76vh;
+    padding-top:58vw;
     padding-bottom:34px;
   }
 
   .hero__bg{
-    height:76vh;
-    background-size:cover;
-    background-position:center 28%;
-    transform:scale(1);
+    height:58vw;
+    min-height:210px;
+    max-height:330px;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position:center top;
+    transform:none;
+    background-color:#06111a;
+  }
+
+  .hero__bg::after{
+    background:
+      linear-gradient(180deg, rgba(3,10,16,.05), rgba(4,12,19,.18) 60%, rgba(4,12,19,.86)),
+      linear-gradient(90deg, rgba(0,0,0,.10), transparent 45%, rgba(0,0,0,.10));
+  }
+
+  .hero::before{
+    top:24vw;
   }
 
   .hero__content{
