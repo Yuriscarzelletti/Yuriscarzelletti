@@ -187,7 +187,7 @@ body > .lang-switch{
   z-index:1;
 }
 
-/* SFONDO HERO CORRETTO: stessa larghezza, ma immagine più bassa */
+/* SFONDO HERO */
 .hero__bg{
   position:absolute;
   inset:0;
@@ -232,7 +232,7 @@ body > .lang-switch{
   align-items:flex-end;
 }
 
-/* card a sinistra, più bassa, per non coprire il logo */
+/* CARD HERO ABBASSATA, STESSA LARGHEZZA */
 .hero__card{
   max-width:520px;
   background: linear-gradient(180deg, rgba(10,27,40,.68), rgba(12,31,45,.78));
@@ -243,7 +243,7 @@ body > .lang-switch{
   backdrop-filter: blur(7px);
   position:relative;
   overflow:hidden;
-  margin-top:170px;
+  margin-top:260px;
 }
 
 .hero__card::before{
@@ -811,7 +811,7 @@ body > .lang-switch:hover{
 
   .hero__content{
     align-items:flex-end;
-    padding-top:260px;
+    padding-top:320px;
     padding-bottom:34px;
   }
 
