@@ -188,7 +188,7 @@ body > .lang-switch{
   z-index:1;
 }
 
-/* SFONDO HERO: resta alto e libero, il riquadro scende sotto */
+/* SFONDO HERO */
 .hero__bg{
   position:absolute;
   top:0;
@@ -236,9 +236,10 @@ body > .lang-switch{
   display:block;
 }
 
-/* CARD HERO: ora parte sotto lo sfondo, dove prima iniziavano i counters */
+/* CARD HERO: allungata fino al bordo destro dei counters */
 .hero__card{
-  max-width:520px;
+  width:100%;
+  max-width:100%;
   background: linear-gradient(180deg, rgba(10,27,40,.76), rgba(12,31,45,.88));
   border:1px solid rgba(255,255,255,.10);
   border-radius: var(--radius);
@@ -270,6 +271,14 @@ body > .lang-switch{
   opacity:.09;
   color:#ffffff;
   pointer-events:none;
+}
+
+.hero__card .lead{
+  max-width:760px;
+}
+
+.hero__card .cta-row{
+  max-width:760px;
 }
 
 .title{
@@ -821,10 +830,16 @@ body > .lang-switch:hover{
   }
 
   .hero__card{
+    width:100%;
     max-width:100%;
     margin-top:0;
     padding:22px 18px;
     background: linear-gradient(180deg, rgba(10,27,40,.78), rgba(12,31,45,.90));
+  }
+
+  .hero__card .lead,
+  .hero__card .cta-row{
+    max-width:100%;
   }
 
   .section{
