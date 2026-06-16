@@ -159,10 +159,11 @@ body > .lang-switch{
 /* HERO */
 .hero{
   position:relative;
-  min-height:82vh;
-  display:grid;
-  place-items:center;
-  overflow:hidden;
+  min-height:auto;
+  display:block;
+  overflow:visible;
+  padding-top:82vh;
+  padding-bottom:46px;
 }
 
 /* rosa dei venti decorativa */
@@ -172,7 +173,7 @@ body > .lang-switch{
   width:min(60vw, 560px);
   height:min(60vw, 560px);
   right:-120px;
-  top:50%;
+  top:38vh;
   transform: translateY(-50%);
   border-radius:50%;
   pointer-events:none;
@@ -187,14 +188,18 @@ body > .lang-switch{
   z-index:1;
 }
 
-/* SFONDO HERO */
+/* SFONDO HERO: resta alto e libero, il riquadro scende sotto */
 .hero__bg{
   position:absolute;
-  inset:0;
+  top:0;
+  left:0;
+  right:0;
+  height:82vh;
   background-size:cover;
   background-position:62% 30%;
   transform:scale(1.01);
   filter:saturate(1.05) contrast(1.03);
+  z-index:0;
 }
 
 .hero__bg::after{
@@ -202,12 +207,12 @@ body > .lang-switch{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(180deg, rgba(3,10,16,.18), rgba(4,12,19,.66)),
+    linear-gradient(180deg, rgba(3,10,16,.14), rgba(4,12,19,.40) 62%, rgba(4,12,19,.86)),
     radial-gradient(circle at 62% 42%, rgba(255,220,130,.12), transparent 24%),
     linear-gradient(90deg, rgba(0,0,0,.24), rgba(0,0,0,.08) 42%, rgba(0,0,0,.32));
 }
 
-/* corda decorativa sotto la hero */
+/* corda decorativa sotto la card */
 .hero__content::after{
   content:"";
   display:block;
@@ -225,17 +230,16 @@ body > .lang-switch{
 .hero__content{
   position:relative;
   width:min(1080px, 92vw);
-  padding:48px 0;
+  margin:0 auto;
+  padding:0;
   z-index:2;
-  display:flex;
-  justify-content:flex-start;
-  align-items:flex-end;
+  display:block;
 }
 
-/* CARD HERO ABBASSATA, STESSA LARGHEZZA */
+/* CARD HERO: ora parte sotto lo sfondo, dove prima iniziavano i counters */
 .hero__card{
   max-width:520px;
-  background: linear-gradient(180deg, rgba(10,27,40,.68), rgba(12,31,45,.78));
+  background: linear-gradient(180deg, rgba(10,27,40,.76), rgba(12,31,45,.88));
   border:1px solid rgba(255,255,255,.10);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -243,7 +247,7 @@ body > .lang-switch{
   backdrop-filter: blur(7px);
   position:relative;
   overflow:hidden;
-  margin-top:260px;
+  margin-top:0;
 }
 
 .hero__card::before{
@@ -761,6 +765,7 @@ body > .lang-switch:hover{
     width:72vw;
     height:72vw;
     right:-110px;
+    top:34vh;
     opacity:.10;
   }
 }
@@ -800,26 +805,26 @@ body > .lang-switch:hover{
   }
 
   .hero{
-    min-height:76vh;
+    padding-top:76vh;
+    padding-bottom:34px;
   }
 
   .hero__bg{
+    height:76vh;
     background-size:cover;
     background-position:center 28%;
     transform:scale(1);
   }
 
   .hero__content{
-    align-items:flex-end;
-    padding-top:320px;
-    padding-bottom:34px;
+    padding:0;
   }
 
   .hero__card{
     max-width:100%;
     margin-top:0;
     padding:22px 18px;
-    background: linear-gradient(180deg, rgba(10,27,40,.72), rgba(12,31,45,.84));
+    background: linear-gradient(180deg, rgba(10,27,40,.78), rgba(12,31,45,.90));
   }
 
   .section{
