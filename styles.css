@@ -66,9 +66,7 @@ body::after{
 
 .topbar,
 main,
-.footer,
-.lang-switcher,
-body > .lang-switch{
+.footer{
   position:relative;
   z-index:2;
 }
@@ -687,14 +685,14 @@ body > .lang-switch{
 }
 
 /* LANGUAGE SWITCHER
-   Non è più fixed: resta in alto e poi scorre via normalmente */
+   Fisso nella barra alta sia desktop sia mobile */
 .lang-switcher,
 body > .lang-switch{
-  position:absolute;
+  position:fixed;
   top:18px;
   left:50%;
   transform:translateX(-50%);
-  z-index:9999;
+  z-index:80;
 }
 
 .lang-switcher{
@@ -867,9 +865,15 @@ body > .lang-switch:hover{
 
   .lang-switcher,
   body > .lang-switch{
-    position:absolute;
+    position:fixed;
     top:18px;
     left:50%;
     transform:translateX(-50%);
+    z-index:80;
+  }
+
+  .lang-switch{
+    width:48px;
+    height:34px;
   }
 }
