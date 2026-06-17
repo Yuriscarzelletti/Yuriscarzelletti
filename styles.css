@@ -19,16 +19,6 @@
   --shadow-2:0 10px 26px rgba(0,0,0,.28);
   --radius:20px;
   --radius-sm:14px;
-
-  --rope-border:
-    repeating-linear-gradient(
-      135deg,
-      var(--rope-dark) 0 8px,
-      var(--rope) 8px 16px,
-      var(--rope-light) 16px 24px,
-      var(--rope) 24px 32px,
-      var(--rope-dark) 32px 40px
-    );
 }
 
 *{ box-sizing:border-box; }
@@ -245,25 +235,23 @@ main,
   display:block;
 }
 
-/* BORDI CORDAME */
+/* BORDO CORDAME PULITO, SENZA STRISCE DENTRO */
 .hero__card,
 .stat,
 .card,
 .tl{
-  border:5px solid transparent;
-  background-clip:padding-box, border-box;
+  border:4px solid var(--rope);
+  box-shadow:
+    var(--shadow-2),
+    0 0 0 1px rgba(200,154,99,.34),
+    inset 0 0 0 1px rgba(255,255,255,.035);
 }
 
 .hero__card{
   width:100%;
   max-width:100%;
-  background:
-    linear-gradient(180deg, rgba(10,27,40,.76), rgba(12,31,45,.88)) padding-box,
-    var(--rope-border) border-box;
+  background:linear-gradient(180deg, rgba(10,27,40,.86), rgba(12,31,45,.94));
   border-radius:var(--radius);
-  box-shadow:
-    var(--shadow),
-    inset 0 0 0 1px rgba(255,255,255,.04);
   padding:26px 24px;
   backdrop-filter:blur(7px);
   position:relative;
@@ -275,10 +263,8 @@ main,
   content:"";
   position:absolute;
   inset:0;
-  background:
-    linear-gradient(120deg, transparent 0 35%, rgba(255,255,255,.05) 50%, transparent 65%),
-    linear-gradient(to right, rgba(201,168,106,.18), transparent 24%);
   pointer-events:none;
+  background:none;
 }
 
 .hero__card::after{
@@ -371,14 +357,9 @@ main,
 }
 
 .stat{
-  background:
-    linear-gradient(180deg, rgba(15,37,53,.92), rgba(11,27,39,.96)) padding-box,
-    var(--rope-border) border-box;
+  background:linear-gradient(180deg, rgba(15,37,53,.94), rgba(11,27,39,.98));
   border-radius:18px;
   padding:22px 18px;
-  box-shadow:
-    var(--shadow-2),
-    inset 0 0 0 1px rgba(255,255,255,.035);
   text-align:center;
   position:relative;
   overflow:hidden;
@@ -481,14 +462,9 @@ main,
 
 /* CARDS */
 .card{
-  background:
-    linear-gradient(180deg, rgba(14,34,49,.92), rgba(11,28,40,.96)) padding-box,
-    var(--rope-border) border-box;
+  background:linear-gradient(180deg, rgba(14,34,49,.94), rgba(11,28,40,.98));
   border-radius:var(--radius);
   overflow:hidden;
-  box-shadow:
-    var(--shadow),
-    inset 0 0 0 1px rgba(255,255,255,.035);
   position:relative;
 }
 
@@ -497,9 +473,7 @@ main,
   position:absolute;
   inset:0;
   pointer-events:none;
-  background:
-    linear-gradient(to bottom right, rgba(255,255,255,.03), transparent 24%),
-    linear-gradient(to top left, rgba(31,167,120,.03), transparent 28%);
+  background:none;
 }
 
 .card__img{
@@ -589,7 +563,7 @@ main,
   margin:20px 0;
 }
 
-/* TIMELINE CURRICULUM: SOLO BORDO CORDAME, SENZA PALLINI INTERNI */
+/* TIMELINE */
 .timeline{
   display:grid;
   gap:14px;
@@ -601,34 +575,30 @@ main,
   gap:12px;
   padding:14px;
   border-radius:16px;
-  background:
-    linear-gradient(180deg, rgba(13,34,49,.84), rgba(11,28,40,.88)) padding-box,
-    var(--rope-border) border-box;
-  box-shadow:
-    0 8px 18px rgba(0,0,0,.16),
-    inset 0 0 0 1px rgba(255,255,255,.035);
+  background:rgba(255,255,255,.035);
   position:relative;
-  overflow:hidden;
 }
 
 .tl::before{
-  display:none;
-  content:none;
+  content:"";
+  position:absolute;
+  left:12px;
+  top:50%;
+  transform:translateY(-50%);
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 0 6px rgba(201,168,106,.10);
+  opacity:.9;
 }
 
 .tl__when{
-  padding-left:0;
+  padding-left:18px;
   color:var(--gold);
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight:700;
   letter-spacing:.2px;
-  position:relative;
-  z-index:1;
-}
-
-.tl__what{
-  position:relative;
-  z-index:1;
 }
 
 .tl__what strong{
@@ -791,7 +761,7 @@ body > .lang-switch:hover{
   }
 
   .tl__when{
-    padding-left:0;
+    padding-left:18px;
   }
 
   .hero::before{
