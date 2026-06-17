@@ -10,11 +10,21 @@
   --accent-2:#7fd4b4;
   --gold:#c9a86a;
   --rope:#b98b4b;
+  --rope-dark:#6f431f;
+  --rope-light:#e0bd77;
   --line:rgba(255,255,255,.10);
   --shadow:0 20px 60px rgba(0,0,0,.42);
   --shadow-2:0 10px 26px rgba(0,0,0,.28);
   --radius:20px;
   --radius-sm:14px;
+  --rope-border:repeating-linear-gradient(
+    45deg,
+    var(--rope-dark) 0 6px,
+    var(--rope) 6px 12px,
+    var(--rope-light) 12px 17px,
+    var(--rope) 17px 23px,
+    var(--rope-dark) 23px 29px
+  );
 }
 
 *{ box-sizing:border-box; }
@@ -234,14 +244,18 @@ main,
   display:block;
 }
 
-/* CARD HERO */
+/* CARD HERO CON BORDO CORDAME */
 .hero__card{
   width:100%;
   max-width:100%;
-  background: linear-gradient(180deg, rgba(10,27,40,.76), rgba(12,31,45,.88));
-  border:1px solid rgba(255,255,255,.10);
+  background:
+    linear-gradient(180deg, rgba(10,27,40,.76), rgba(12,31,45,.88)) padding-box,
+    var(--rope-border) border-box;
+  border:4px solid transparent;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow:
+    var(--shadow),
+    inset 0 0 0 1px rgba(255,255,255,.04);
   padding: 26px 24px;
   backdrop-filter: blur(7px);
   position:relative;
@@ -357,11 +371,15 @@ main,
 }
 
 .stat{
-  background: linear-gradient(180deg, rgba(15,37,53,.92), rgba(11,27,39,.96));
-  border:1px solid rgba(255,255,255,.08);
+  background:
+    linear-gradient(180deg, rgba(15,37,53,.92), rgba(11,27,39,.96)) padding-box,
+    var(--rope-border) border-box;
+  border:4px solid transparent;
   border-radius: 18px;
   padding:22px 18px;
-  box-shadow: var(--shadow-2);
+  box-shadow:
+    var(--shadow-2),
+    inset 0 0 0 1px rgba(255,255,255,.035);
   text-align:center;
   position:relative;
   overflow:hidden;
@@ -462,13 +480,17 @@ main,
   max-width:72ch;
 }
 
-/* CARDS */
+/* CARDS CON BORDO CORDAME */
 .card{
-  background: linear-gradient(180deg, rgba(14,34,49,.92), rgba(11,28,40,.96));
-  border:1px solid rgba(255,255,255,.08);
+  background:
+    linear-gradient(180deg, rgba(14,34,49,.92), rgba(11,28,40,.96)) padding-box,
+    var(--rope-border) border-box;
+  border:4px solid transparent;
   border-radius: var(--radius);
   overflow:hidden;
-  box-shadow: var(--shadow);
+  box-shadow:
+    var(--shadow),
+    inset 0 0 0 1px rgba(255,255,255,.035);
   position:relative;
 }
 
@@ -569,7 +591,7 @@ main,
   margin: 20px 0;
 }
 
-/* TIMELINE */
+/* TIMELINE CON BORDO CORDAME */
 .timeline{
   display:grid;
   gap:14px;
@@ -581,8 +603,10 @@ main,
   gap:12px;
   padding:14px;
   border-radius:16px;
-  border:1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.03);
+  border:3px solid transparent;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.025)) padding-box,
+    var(--rope-border) border-box;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
   position:relative;
 }
@@ -633,8 +657,10 @@ main,
 .form textarea{
   width:100%;
   margin-top:6px;
-  background: rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.12);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.045)) padding-box,
+    var(--rope-border) border-box;
+  border:3px solid transparent;
   border-radius:14px;
   padding:13px 14px;
   color: var(--text);
@@ -650,9 +676,10 @@ main,
 
 .form input:focus,
 .form textarea:focus{
-  border-color: rgba(127,212,180,.45);
   box-shadow: 0 0 0 4px rgba(31,167,120,.10);
-  background: rgba(255,255,255,.06);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.065), rgba(255,255,255,.055)) padding-box,
+    var(--rope-border) border-box;
 }
 
 .hint{
@@ -850,7 +877,10 @@ body > .lang-switch:hover{
     max-width:100%;
     margin-top:0;
     padding:22px 18px;
-    background: linear-gradient(180deg, rgba(10,27,40,.78), rgba(12,31,45,.90));
+    border-width:3px;
+    background:
+      linear-gradient(180deg, rgba(10,27,40,.78), rgba(12,31,45,.90)) padding-box,
+      var(--rope-border) border-box;
   }
 
   .hero__card .lead,
@@ -862,6 +892,11 @@ body > .lang-switch:hover{
     font-size: clamp(16px, 4.15vw, 22px);
     white-space:nowrap;
     letter-spacing:-.55px;
+  }
+
+  .stat,
+  .card{
+    border-width:3px;
   }
 
   .section{
