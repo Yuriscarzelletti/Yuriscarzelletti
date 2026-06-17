@@ -589,7 +589,7 @@ main,
   margin:20px 0;
 }
 
-/* TIMELINE CURRICULUM: SOLO BORDO CORDAME, INTERNO PULITO */
+/* TIMELINE CURRICULUM: SOLO BORDO CORDAME, SENZA PALLINI INTERNI */
 .timeline{
   display:grid;
   gap:14px;
@@ -612,21 +612,12 @@ main,
 }
 
 .tl::before{
-  content:"";
-  position:absolute;
-  left:12px;
-  top:50%;
-  transform:translateY(-50%);
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:var(--gold);
-  box-shadow:0 0 0 6px rgba(201,168,106,.10);
-  opacity:.9;
+  display:none;
+  content:none;
 }
 
 .tl__when{
-  padding-left:18px;
+  padding-left:0;
   color:var(--gold);
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight:700;
@@ -800,7 +791,7 @@ body > .lang-switch:hover{
   }
 
   .tl__when{
-    padding-left:18px;
+    padding-left:0;
   }
 
   .hero::before{
