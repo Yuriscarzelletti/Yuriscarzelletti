@@ -589,7 +589,7 @@ main,
   margin:20px 0;
 }
 
-/* TIMELINE */
+/* TIMELINE CURRICULUM: SOLO BORDO CORDAME, INTERNO PULITO */
 .timeline{
   display:grid;
   gap:14px;
@@ -602,10 +602,13 @@ main,
   padding:14px;
   border-radius:16px;
   background:
-    linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.025)) padding-box,
+    linear-gradient(180deg, rgba(13,34,49,.84), rgba(11,28,40,.88)) padding-box,
     var(--rope-border) border-box;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+  box-shadow:
+    0 8px 18px rgba(0,0,0,.16),
+    inset 0 0 0 1px rgba(255,255,255,.035);
   position:relative;
+  overflow:hidden;
 }
 
 .tl::before{
@@ -628,6 +631,13 @@ main,
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight:700;
   letter-spacing:.2px;
+  position:relative;
+  z-index:1;
+}
+
+.tl__what{
+  position:relative;
+  z-index:1;
 }
 
 .tl__what strong{
@@ -637,7 +647,7 @@ main,
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
-/* FORM: TORNATI LEGGIBILI */
+/* FORM: PULITO E LEGGIBILE */
 .form{
   display:grid;
   gap:12px;
